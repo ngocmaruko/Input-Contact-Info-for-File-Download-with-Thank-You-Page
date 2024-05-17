@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Thank You</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Your file is downloading. If it doesn't start automatically, <a id="downloadLink" href="download.php">click here</a>.</p>
+    </div>
+    <script>
+        // Automatically start download after page loads
+        window.onload = function() {
+            document.getElementById('downloadLink').click();
+        };
+
+        // Redirect back to index page after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000); // 3000 milliseconds = 5 seconds
+    </script>
+</body>
+</html>
